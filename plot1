@@ -8,7 +8,10 @@ setwd("D:/DOST Coursera/Module 4b/Week 1")
 read_consumption_file <- read.table("household_power_consumption.txt", header=TRUE, sep=";", stringsAsFactors=FALSE)
 head(read_consumption_file)
 
-subSetData <- read_consumption_file[data$Date %in% c("1/2/2007","2/2/2007") ,]
+#•	We will only be using data from the dates 2007-02-01 and 2007-02-02. One alternative is to read the data from just those dates rather than reading in the entire dataset and subsetting to those dates
+
+subsetData <- read_consumption_file[data$Date %in% c("1/2/2007","2/2/2007") ,]
+subsetData <- read_consumption_file[data$Date %in% c("1/2/2007","2/2/2007") ,]
 
 #title
 title(main='Global Active Power")
