@@ -18,8 +18,8 @@ conv_datentime <- strptime(paste(data_subset$Date, data_subset$Time, sep=" "), "
 global_active_power <- as.numeric(data_subset$Global_active_power)
 
 #Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
-png("plot1.png", width=480, height=480)
-hist(data_subset$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+png("plot2.png", width=480, height=480)
+plot(conv_datentime, global_active_power, type=1, xlab="", ylab="Global Active Power (kilowatts)") 
 
 #Don't forget to close
 dev.off()
