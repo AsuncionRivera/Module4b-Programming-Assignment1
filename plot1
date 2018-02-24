@@ -5,17 +5,20 @@ library(datasets)
 setwd("D:/DOST Coursera/Module 4b/Week 1")
 
 #read file and check contents
-read_consumption_file <- read.table("household_power_consumption.txt", header=TRUE, sep=";", stringsAsFactors=FALSE)
+read_consumption_file <- read.table("household_power_consumption.txt", header=TRUE, sep=";", na.strings="?", stringsAsFactors=FALSE)
 head(read_consumption_file)
 
 #We will only be using data from the dates 2007-02-01 and 2007-02-02. One alternative is to read the data from just those dates rather than reading in the entire dataset and subsetting to those dates
-data_subset <- read_consumption_file[data$Date %in% c("1/2/2007","2/2/2007") ,]
+data_subset <- read_consumption_file[read_consumption_file$Date %in% c("1/2/2007","2/2/2007") ,]
 
 #convert to numeric
-global_active_power <- as.numeric(subSetData$Global_active_power)
+global_active_power <- as.numeric(data_subset$Global_active_power)
 
 #Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
 png("plot1.png", width=480, height=480)
+hist(data_subset$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+
+
 
 
 
