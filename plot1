@@ -8,6 +8,10 @@ setwd("D:/DOST Coursera/Module 4b/Week 1")
 read_consumption_file <- read.table("household_power_consumption.txt", header=TRUE, sep=";", stringsAsFactors=FALSE)
 head(read_consumption_file)
 
+subSetData <- read_consumption_file[data$Date %in% c("1/2/2007","2/2/2007") ,]
+
+#title
+title(main='Global Active Power")
 
 #Don't forget to close
 dev.off()
