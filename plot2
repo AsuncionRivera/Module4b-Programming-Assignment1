@@ -12,7 +12,7 @@ head(read_consumption_file)
 data_subset <- read_consumption_file[read_consumption_file$Date %in% c("1/2/2007","2/2/2007") ,]
 
 #You may find it useful to convert the Date and Time variables to Date/Time classes in R using the strptime()  and as.Date() functions
-conv_datentime <- strptime(paste(data_subset$date, data_subset$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
+conv_datentime <- strptime(paste(data_subset$Date, data_subset$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
 
 #convert to numeric
 global_active_power <- as.numeric(data_subset$Global_active_power)
