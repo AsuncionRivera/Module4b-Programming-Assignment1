@@ -1,0 +1,13 @@
+#Call library
+library(datasets)
+
+#set working directory
+setwd("D:/DOST Coursera/Module 4b/Week 1")
+
+#read file and check contents
+read_consumption_file <- read.table("household_power_consumption.txt", header=TRUE, sep=";", stringsAsFactors=FALSE)
+head(read_consumption_file)
+
+
+#Don't forget to close
+dev.off()
