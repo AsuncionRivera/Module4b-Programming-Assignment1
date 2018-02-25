@@ -1,5 +1,6 @@
 # Module4b-Programming-Assignment1
 This is in compliance with Module4b Week 1's requirement to make 4 Plots
+
 Each plot should :
  - be saved to a png file with a width of 480 pixels and a height of 480 pixels
  - be named plot1.png, plot2.png, etc
